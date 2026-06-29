@@ -1,8 +1,10 @@
 const Home = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
-    </div>
+    <>
+      <section className="py-20 text-center">
+        <h1 className="text-4xl font-bold">Home Page</h1>
+      </section>
+    </>
   );
 };
 

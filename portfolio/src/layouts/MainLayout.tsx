@@ -10,9 +10,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     <>
       <Navbar />
 
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
 
       <Footer />
     </>
