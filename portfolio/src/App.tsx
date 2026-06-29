@@ -1,8 +1,11 @@
+import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/Home";
+
 function App() {
   return (
-    <>
-      <h1>Portfolio Yuan Ramatullah</h1>
-    </>
+    <MainLayout>
+      <Home />
+    </MainLayout>
   );
 }
 
