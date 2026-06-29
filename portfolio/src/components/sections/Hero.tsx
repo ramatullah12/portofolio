@@ -1,3 +1,4 @@
+import profile from "../../assets/images/profile.png";
 const Hero = () => {
   return (
     <section
@@ -42,9 +43,9 @@ const Hero = () => {
       <div>
 
         <img
-          src="https://placehold.co/400x400"
+          src={profile}
           alt="Profile"
-          className="rounded-full shadow-lg"
+          className="w-96 rounded-full shadow-lg"
         />
 
       </div>
