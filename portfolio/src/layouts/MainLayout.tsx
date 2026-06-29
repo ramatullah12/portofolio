@@ -1,3 +1,6 @@
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
+
 type MainLayoutProps = {
   children: React.ReactNode;
 };
@@ -5,7 +8,13 @@ type MainLayoutProps = {
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
-      {children}
+      <Navbar />
+
+      <main>
+        {children}
+      </main>
+
+      <Footer />
     </>
   );
 };
