@@ -10,7 +10,6 @@ const Hero = () => {
         <p className="text-lg text-blue-600 font-semibold">
           Halo, Saya 👋
         </p>
-
         <h1 className="mt-3 text-5xl font-bold">
           Yuan Ramatullah
         </h1>
