@@ -28,7 +28,6 @@ const Hero = () => {
             Hubungi Saya
           </button>
         </div>
-
       </div>
 
       {/* Bagian Kanan */}
