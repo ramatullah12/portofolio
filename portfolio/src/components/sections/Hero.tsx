@@ -20,7 +20,6 @@ const Hero = () => {
           Saya adalah mahasiswa Sistem Informasi Universitas multi data palembang yang memiliki minat pada Frontend Development,
           React, Laravel, Flutter, dan UI/UX.
         </p>
-
         <div className="mt-8 flex gap-4">
 
           <button className="rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700">
