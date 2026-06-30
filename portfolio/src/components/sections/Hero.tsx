@@ -38,7 +38,6 @@ const Hero = () => {
           className="w-96 rounded-full shadow-lg"
         />
       </div>
-
     </section>
   );
 };
