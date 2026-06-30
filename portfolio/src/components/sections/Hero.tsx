@@ -13,7 +13,6 @@ const Hero = () => {
         <h1 className="mt-3 text-5xl font-bold">
           Yuan Ramatullah
         </h1>
-
         <h2 className="mt-4 text-2xl text-gray-600">
           Frontend Developer
         </h2>
