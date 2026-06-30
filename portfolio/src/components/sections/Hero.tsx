@@ -7,7 +7,6 @@ const Hero = () => {
     >
       {/* Bagian Kiri */}
       <div className="max-w-xl">
-
         <p className="text-lg text-blue-600 font-semibold">
           Halo, Saya 👋
         </p>
