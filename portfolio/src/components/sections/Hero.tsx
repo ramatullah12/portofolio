@@ -32,7 +32,6 @@ const Hero = () => {
 
       {/* Bagian Kanan */}
       <div>
-
         <img
           src={profile}
           alt="Profile"
