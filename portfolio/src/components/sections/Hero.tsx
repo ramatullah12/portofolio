@@ -24,7 +24,6 @@ const Hero = () => {
           <button className="rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700">
             Download CV
           </button>
-
           <button className="rounded-lg border border-blue-600 px-6 py-3 text-blue-600 hover:bg-blue-50">
             Hubungi Saya
           </button>
