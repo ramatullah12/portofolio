@@ -16,7 +16,6 @@ const Hero = () => {
         <h2 className="mt-4 text-2xl text-gray-600">
           Frontend Developer
         </h2>
-
         <p className="mt-6 leading-8 text-gray-500">
           Saya adalah mahasiswa Sistem Informasi Universitas multi data palembang yang memiliki minat pada Frontend Development,
           React, Laravel, Flutter, dan UI/UX.
