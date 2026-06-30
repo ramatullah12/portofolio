@@ -29,7 +29,6 @@ const Hero = () => {
           </button>
         </div>
       </div>
-
       {/* Bagian Kanan */}
       <div>
         <img
