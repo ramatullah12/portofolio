@@ -23,10 +23,10 @@ const Projects = () => {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          badge="Karya & Portofolio"
-          title="Proyek Pilihan yang"
-          highlight="Telah Saya Bangun"
-          subtitle="Studi kasus pengembangan aplikasi web, sistem informasi, aplikasi mobile Flutter, serta eksplorasi desain UI/UX."
+          badge="Live Projects (Vercel)"
+          title="Aplikasi Web Nyata yang"
+          highlight="Telah Saya Bangun & Deploy"
+          subtitle="Kumpulan proyek magang industri (PT Rachmat Kelantan Sakti & PT Kedaton Sejahtera Abadi), aplikasi Job Portal, dan proyek akademik yang dapat diakses secara langsung."
         />
 
         {/* Category Filter Tabs */}
@@ -49,8 +49,8 @@ const Projects = () => {
           })}
         </div>
 
-        {/* Projects Grid */}
-        <motion.div layout className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+        {/* Projects Grid (2 columns on desktop so the 4 live projects look balanced & spacious) */}
+        <motion.div layout className="grid gap-8 md:grid-cols-2">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
               <ProjectCard
@@ -80,7 +80,7 @@ const Projects = () => {
                   {activeProject.category} &bull; {activeProject.role}
                 </span>
                 <span className="rounded-full bg-black/25 px-3 py-1 font-mono">
-                  Tahun {activeProject.year}
+                  {activeProject.year}
                 </span>
               </div>
               <h4 className="mt-2 text-2xl font-extrabold">{activeProject.subtitle}</h4>
@@ -130,7 +130,7 @@ const Projects = () => {
               </ul>
             </div>
 
-            {/* Tech Stack & Links */}
+            {/* Tech Stack & Live Links */}
             <div className="flex flex-wrap items-center justify-between gap-4 border-t border-slate-100 pt-5 dark:border-slate-800">
               <div className="flex flex-wrap gap-1.5">
                 {activeProject.technologies.map((tech) => (
@@ -143,17 +143,28 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-2.5">
+                {activeProject.liveUrl && (
+                  <a
+                    href={activeProject.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-xs font-bold text-white shadow-md shadow-blue-500/20 transition hover:bg-blue-700"
+                  >
+                    <span>Buka Live App (Vercel)</span>
+                    <FiExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                )}
+
                 {activeProject.githubUrl && (
                   <a
                     href={activeProject.githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-xs font-bold text-white transition hover:bg-blue-600 dark:bg-slate-800 dark:hover:bg-blue-600"
+                    className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-xs font-bold text-white transition hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700"
                   >
                     <FiGithub className="h-4 w-4" />
-                    Lihat Repositori GitHub
-                    <FiExternalLink className="h-3.5 w-3.5" />
+                    GitHub
                   </a>
                 )}
               </div>
@@ -166,4 +177,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

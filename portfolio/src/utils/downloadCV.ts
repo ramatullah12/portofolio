@@ -115,6 +115,10 @@ export function downloadCV() {
           color: #1f2937;
           margin-bottom: 4px;
         }
+        li a {
+          color: #2563eb;
+          text-decoration: none;
+        }
         @media print {
           body { background: #fff; padding: 0; }
           .toolbar { display: none; }
@@ -174,6 +178,16 @@ export function downloadCV() {
             <li><strong>Maintenance & Repair Tracking:</strong> Built a comprehensive repair management system to document equipment downtime, service history, and routine maintenance schedules.</li>
             <li><strong>Inventory & Spare Parts Control:</strong> Implemented an inventory tracking system to manage repair stocks, ensuring spare part availability and reducing operational delays.</li>
             <li><strong>Automated Data Synchronization:</strong> Integrated the repair module with inventory databases to automate stock deduction and procurement alerts during maintenance activities.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="section-title">DEPLOYED WEB PROJECTS</div>
+          <ul>
+            <li><strong>Rakentra (Fleet & Heavy Equipment System - PT RKS):</strong> <a href="https://rakentra.vercel.app/login" target="_blank">https://rakentra.vercel.app/login</a></li>
+            <li><strong>Kedaton Property (Real Estate Platform - PT KSA):</strong> <a href="https://kedaton-gamma.vercel.app/" target="_blank">https://kedaton-gamma.vercel.app/</a></li>
+            <li><strong>Job Portal (Career & Recruitment Web App):</strong> <a href="https://job-portal-wine-mu.vercel.app/" target="_blank">https://job-portal-wine-mu.vercel.app/</a></li>
+            <li><strong>Project UAS SI4B (Information Systems Web App):</strong> <a href="https://project-uas-si4b-yuandimas.vercel.app/" target="_blank">https://project-uas-si4b-yuandimas.vercel.app/</a></li>
           </ul>
         </div>
 

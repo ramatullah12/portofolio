@@ -1,4 +1,4 @@
-export type ProjectCategory = "Semua" | "Web App" | "Mobile App" | "UI/UX Design";
+export type ProjectCategory = "Semua" | "Internship & Enterprise" | "Web App" | "Academic Project";
 
 export interface Project {
   id: string;
@@ -14,12 +14,12 @@ export interface Project {
   role: string;
   featured: boolean;
   liveUrl?: string;
+  liveDomain?: string;
   githubUrl?: string;
   accentColor: string;
-  previewType: "absensi" | "fotografi" | "rental" | "studyhub" | "fintrack" | "pos";
+  previewType: "rakentra" | "kedaton" | "jobportal" | "uassi4b";
   metrics?: {
     label: string;
     value: string;
   }[];
 }
-
