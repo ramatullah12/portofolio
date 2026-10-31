@@ -2,6 +2,24 @@ import type { Certificate } from "../types/Certificate";
 
 export const certificates: Certificate[] = [
   {
+    id: "cert-dba-certified",
+    title: "Lulus Sertifikasi Kompetensi — Database Administrator (DBA)",
+    issuer: "Sertifikasi Kompetensi Profesi / BNSP",
+    date: "2025 – 2026",
+    credentialId: "DBA-CERT-LULUS",
+    category: "Professional Certification",
+    skills: [
+      "Database Administration",
+      "MySQL & Relational DB",
+      "SQL Query Optimization",
+      "Database Design & Security",
+      "Backup & Data Integrity",
+    ],
+    description:
+      "Dinyatakan Kompeten / Lulus Sertifikasi Database Administrator (DBA), mencakup perancangan skema basis data relasional, administrasi server database, optimasi kueri SQL, keamanan akses data, serta pemeliharaan integritas data.",
+    accentColor: "from-amber-500 to-orange-600",
+  },
+  {
     id: "cert-mdp-is",
     title: "Sarjana Sistem Informasi (S1) — IPK 3.47 / 4.00",
     issuer: "Universitas Multi Data Palembang",
@@ -46,17 +64,5 @@ export const certificates: Certificate[] = [
     description:
       "Pengalaman industri mengembangkan platform properti berbasis Laravel (MVC), perancangan skema database MySQL, integrasi RESTful API dengan frontend Angular, dan fitur pencarian cepat.",
     accentColor: "from-violet-500 to-fuchsia-500",
-  },
-  {
-    id: "cert-frontend-react",
-    title: "Modern Frontend Engineering: React.js, Redux & TanStack Query",
-    issuer: "Core Technical Specialization",
-    date: "2025 – 2026",
-    credentialId: "FE-REACT-SPEC",
-    category: "Frontend Specialization",
-    skills: ["React.js", "Redux", "TanStack Query", "Tailwind CSS", "Clean Code"],
-    description:
-      "Spesialisasi teknis dalam pengembangan aplikasi web responsif menggunakan React.js, pengelolaan state klien dengan Redux, dan sinkronisasi state server dengan TanStack Query.",
-    accentColor: "from-sky-500 to-indigo-500",
   },
 ];

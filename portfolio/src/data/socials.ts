@@ -7,8 +7,8 @@ export const personalInfo = {
   roles: [
     "Frontend Developer (React.js)",
     "Fullstack Web Developer (Laravel)",
+    "Certified Database Administrator",
     "Redux & TanStack Query Specialist",
-    "Information Systems Graduate",
   ],
   university: "Universitas Multi Data Palembang",
   major: "S1 Sistem Informasi (Information Systems)",
@@ -23,7 +23,7 @@ export const personalInfo = {
   github: "https://github.com/ramatullah12",
   githubUsername: "@ramatullah12",
   availability: "Siap Bekerja Full-Time / Kontrak / Kolaborasi Proyek",
-  bio: "Saya adalah seorang Frontend Developer dengan gelar S1 Sistem Informasi dari Universitas Multi Data Palembang (IPK 3.47/4.00), yang memiliki spesialisasi dalam membangun aplikasi web responsif dan berpusat pada pengguna menggunakan React.js. Berpengalaman mengintegrasikan REST API, mengelola state dengan Redux untuk client state serta TanStack Query (React Query) untuk sinkronisasi server state, serta membangun arsitektur Fullstack menggunakan Laravel (MVC) dan MySQL.",
+  bio: "Saya adalah seorang Frontend & Fullstack Web Developer lulusan S1 Sistem Informasi dari Universitas Multi Data Palembang (IPK 3.47/4.00) serta Lulusan Sertifikasi Kompetensi Database Administrator (DBA). Memiliki spesialisasi dalam membangun aplikasi web responsif menggunakan React.js, mengelola state dengan Redux & TanStack Query (React Query), serta membangun arsitektur Fullstack menggunakan Laravel (MVC) dan basis data MySQL yang teroptimasi.",
   summaryEn:
     "I'm a passionate Frontend Developer with a degree in Information Systems, specializing in building responsive, user-centric applications with React.js. I have solid experience integrating REST APIs, efficiently managing state with Redux for client state and TanStack Query (React Query) for server state synchronization, and implementing clean coding practices. With hands-on experience from various internships and real-world projects, I'm committed to delivering high-quality, maintainable solutions and continually developing my skills in modern frontend technologies.",
   softSkills: [
@@ -130,11 +130,13 @@ export const experiences: ExperienceItem[] = [
       "Menempuh pendidikan Sarjana Sistem Informasi dengan fokus pada pengembangan aplikasi web modern (React.js, Laravel, Express.js), manajemen state (Redux & TanStack Query), desain database relasional, serta analisis visualisasi data.",
     highlights: [
       "Meraih Indeks Prestasi Kumulatif (IPK) 3.47 / 4.00 dengan penguasaan kuat di bidang Software Engineering & Information Systems.",
+      "Lulus Sertifikasi Kompetensi Database Administrator (DBA) — menguasai perancangan skema relasional, optimasi SQL, dan administrasi basis data.",
       "Spesialisasi pada Frontend Development dengan React.js, Redux (client state), dan TanStack Query / React Query (server state synchronization).",
       "Menguasai siklus pengembangan aplikasi CRUD, MVC Architecture, Database Design, Responsive Web Design, serta UI/UX Prototyping di Figma.",
     ],
     tags: [
       "IPK 3.47/4.00",
+      "Certified DBA",
       "Information Systems",
       "React.js",
       "Redux",

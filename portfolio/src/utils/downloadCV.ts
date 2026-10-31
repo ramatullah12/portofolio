@@ -145,13 +145,14 @@ export function downloadCV() {
         </div>
 
         <div class="section">
-          <div class="section-title">EDUCATION</div>
+          <div class="section-title">EDUCATION & CERTIFICATION</div>
           <div class="row-between">
             <span>Universitas Multi Data Palembang | Information System (S1)</span>
             <span>Sep 2022 – Aug 2026</span>
           </div>
           <ul>
-            <li>IPK: 3.47 / 4.00</li>
+            <li><strong>IPK:</strong> 3.47 / 4.00</li>
+            <li><strong>Professional Certification:</strong> Lulus Sertifikasi Kompetensi Database Administrator (DBA)</li>
           </ul>
         </div>
 

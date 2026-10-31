@@ -99,6 +99,11 @@ const Hero = () => {
               IPK {personalInfo.gpa} — Univ. Multi Data Palembang
             </span>
             <span className="h-1 w-1 rounded-full bg-slate-300 dark:bg-slate-700" />
+            <span className="inline-flex items-center gap-1.5 font-semibold text-amber-600 dark:text-amber-400">
+              <FiCheckCircle className="h-4 w-4 text-amber-500" />
+              Lulus Sertifikasi Database Administrator
+            </span>
+            <span className="h-1 w-1 rounded-full bg-slate-300 dark:bg-slate-700" />
             <a
               href={`tel:${personalInfo.phone}`}
               className="inline-flex items-center gap-1.5 hover:text-blue-600 dark:hover:text-blue-400"
