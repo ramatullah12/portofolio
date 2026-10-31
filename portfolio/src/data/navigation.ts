@@ -1,32 +1,51 @@
-export const navigation = [
+export interface NavItem {
+  id: number;
+  title: string;
+  path: string;
+  sectionId: string;
+}
+
+export const navigation: NavItem[] = [
   {
     id: 1,
-    title: "Home",
+    title: "Beranda",
     path: "#home",
+    sectionId: "home",
   },
   {
     id: 2,
-    title: "About",
+    title: "Tentang",
     path: "#about",
+    sectionId: "about",
   },
   {
     id: 3,
-    title: "Skills",
+    title: "Keahlian",
     path: "#skills",
+    sectionId: "skills",
   },
   {
     id: 4,
-    title: "Projects",
-    path: "#projects",
+    title: "Perjalanan",
+    path: "#experience",
+    sectionId: "experience",
   },
   {
     id: 5,
-    title: "Certificates",
-    path: "#certificates",
+    title: "Proyek",
+    path: "#projects",
+    sectionId: "projects",
   },
   {
     id: 6,
-    title: "Contact",
+    title: "Sertifikasi",
+    path: "#certificates",
+    sectionId: "certificates",
+  },
+  {
+    id: 7,
+    title: "Kontak",
     path: "#contact",
+    sectionId: "contact",
   },
 ];
