@@ -180,7 +180,7 @@ const Hero = () => {
               <img
                 src={profile}
                 alt="Yuan Ramatullah - Frontend & Fullstack Web Developer"
-                className="mx-auto h-[420px] w-full object-cover object-top transition-transform duration-500 hover:scale-105 sm:h-[460px]"
+                className="mx-auto h-[420px] w-full object-cover object-[center_35%] transition-transform duration-500 hover:scale-105 sm:h-[460px]"
               />
 
               {/* Bottom Overlay Info Bar inside photo frame */}
