@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { FiArrowUp, FiMail, FiMapPin, FiCode, FiHeart } from "react-icons/fi";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FiArrowUp, FiMail, FiMapPin, FiCode, FiHeart, FiPhone } from "react-icons/fi";
 import { navigation } from "../../data/navigation";
 import { personalInfo } from "../../data/socials";
 
@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="relative border-t border-slate-200/80 bg-white pt-16 pb-10 dark:border-slate-800/80 dark:bg-slate-950">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-12 pb-12 border-b border-slate-200/70 dark:border-slate-800/80">
+        <div className="grid gap-10 border-b border-slate-200/70 pb-12 md:grid-cols-12 dark:border-slate-800/80">
           {/* Col 1: Brand & Bio */}
           <div className="md:col-span-5">
             <a href="#home" className="inline-flex items-center gap-3">
@@ -24,23 +24,22 @@ const Footer = () => {
             </a>
 
             <p className="mt-4 max-w-md text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-              Mahasiswa Sistem Informasi{" "}
+              Frontend & Fullstack Web Developer lulusan{" "}
               <span className="font-semibold text-slate-900 dark:text-slate-200">
-                Universitas Multi Data Palembang
-              </span>{" "}
-              yang berdedikasi membangun aplikasi web dan mobile modern dengan fokus pada kualitas
-              kode dan pengalaman pengguna (UI/UX).
+                S1 Sistem Informasi Universitas Multi Data Palembang (IPK {personalInfo.gpa})
+              </span>
+              . Berfokus pada React.js, Redux, TanStack Query, Laravel (MVC), dan MySQL.
             </p>
 
             <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1.5 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
-              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
+              <span className="h-2 w-2 animate-ping rounded-full bg-emerald-500" />
               {personalInfo.availability}
             </div>
           </div>
 
           {/* Col 2: Quick Navigation */}
           <div className="md:col-span-3">
-            <h3 className="text-xs font-bold tracking-wider text-slate-900 uppercase dark:text-white">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">
               Navigasi Cepat
             </h3>
             <ul className="mt-4 grid grid-cols-2 gap-2.5 text-sm">
@@ -59,7 +58,7 @@ const Footer = () => {
 
           {/* Col 3: Contact & Socials */}
           <div className="md:col-span-4">
-            <h3 className="text-xs font-bold tracking-wider text-slate-900 uppercase dark:text-white">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">
               Informasi Kontak
             </h3>
             <div className="mt-4 space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
@@ -68,10 +67,19 @@ const Footer = () => {
                 <span>{personalInfo.location}</span>
               </p>
               <p className="flex items-center gap-2.5">
+                <FiPhone className="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" />
+                <a
+                  href={`tel:${personalInfo.phone}`}
+                  className="transition hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  {personalInfo.phone}
+                </a>
+              </p>
+              <p className="flex items-center gap-2.5">
                 <FiMail className="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" />
                 <a
                   href={`mailto:${personalInfo.email}`}
-                  className="hover:text-blue-600 dark:hover:text-blue-400 transition"
+                  className="transition hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   {personalInfo.email}
                 </a>
@@ -89,7 +97,7 @@ const Footer = () => {
                 <FaGithub className="h-5 w-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/yuan-ramatullah"
+                href={personalInfo.linkedin}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
@@ -98,13 +106,13 @@ const Footer = () => {
                 <FaLinkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://www.instagram.com/"
+                href={personalInfo.whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-700 transition hover:border-pink-500 hover:bg-pink-600 hover:text-white dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-pink-500 dark:hover:bg-pink-600"
+                aria-label="WhatsApp"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-700 transition hover:border-emerald-500 hover:bg-emerald-600 hover:text-white dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-emerald-500 dark:hover:bg-emerald-600"
               >
-                <FaInstagram className="h-5 w-5" />
+                <FaWhatsapp className="h-5 w-5" />
               </a>
             </div>
           </div>

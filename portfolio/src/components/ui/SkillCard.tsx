@@ -1,33 +1,36 @@
 import { motion } from "framer-motion";
 import {
   SiReact,
-  SiTypescript,
+  SiRedux,
   SiTailwindcss,
   SiJavascript,
+  SiHtml5,
   SiLaravel,
   SiMysql,
   SiPhp,
-  SiFlutter,
+  SiExpress,
   SiFigma,
-  SiFramer,
   SiGit,
-  SiVite,
+  SiPostman,
 } from "react-icons/si";
 import type { Skill } from "../../types/Skill";
 
-const iconMap: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
+const iconMap: Record<
+  string,
+  React.ComponentType<{ className?: string; style?: React.CSSProperties }>
+> = {
   react: SiReact,
-  typescript: SiTypescript,
+  redux: SiRedux,
   tailwind: SiTailwindcss,
   javascript: SiJavascript,
+  html5: SiHtml5,
   laravel: SiLaravel,
   mysql: SiMysql,
   php: SiPhp,
-  flutter: SiFlutter,
+  express: SiExpress,
   figma: SiFigma,
-  framer: SiFramer,
   git: SiGit,
-  vite: SiVite,
+  postman: SiPostman,
 };
 
 interface SkillCardProps {
@@ -71,14 +74,14 @@ const SkillCard = ({ skill, index }: SkillCardProps) => {
       {/* Name & Category */}
       <div className="mt-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400 transition-colors">
+          <h3 className="text-base font-bold text-slate-900 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400">
             {skill.name}
           </h3>
           <span className="font-mono text-xs font-semibold text-slate-500 dark:text-slate-400">
             {skill.level}%
           </span>
         </div>
-        <p className="mt-1.5 text-xs leading-relaxed text-slate-600 dark:text-slate-400 line-clamp-2">
+        <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-slate-600 dark:text-slate-400">
           {skill.description}
         </p>
       </div>
@@ -99,4 +102,3 @@ const SkillCard = ({ skill, index }: SkillCardProps) => {
 };
 
 export default SkillCard;
-
