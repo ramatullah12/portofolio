@@ -171,6 +171,38 @@ const ProjectPreviewIllustration = ({
             </div>
           </>
         )}
+
+        {previewType === "rpl" && (
+          <>
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-amber-300">
+                  SOFTWARE ENGINEERING PROJECT
+                </div>
+                <div className="mt-0.5 text-xs font-bold">
+                  RPL Web App • System & UI Workflow
+                </div>
+              </div>
+              <span className="rounded-full border border-amber-400/40 bg-amber-500/20 px-2.5 py-0.5 text-[10px] font-semibold text-amber-200">
+                RPL Project
+              </span>
+            </div>
+            <div className="my-2 grid grid-cols-3 gap-2">
+              <div className="rounded-lg bg-white/10 p-2">
+                <div className="text-[9px] text-slate-300">Arsitektur</div>
+                <div className="text-xs font-bold text-amber-300">Clean UI</div>
+              </div>
+              <div className="rounded-lg bg-white/10 p-2">
+                <div className="text-[9px] text-slate-300">Metodologi</div>
+                <div className="text-xs font-bold text-emerald-300">SDLC / RPL</div>
+              </div>
+              <div className="rounded-lg bg-white/10 p-2">
+                <div className="text-[9px] text-slate-300">Status</div>
+                <div className="text-xs font-bold text-white">Live App</div>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

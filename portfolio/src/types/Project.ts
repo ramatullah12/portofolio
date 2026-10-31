@@ -17,7 +17,7 @@ export interface Project {
   liveDomain?: string;
   githubUrl?: string;
   accentColor: string;
-  previewType: "rakentra" | "kedaton" | "jobportal" | "uassi4b";
+  previewType: "rakentra" | "kedaton" | "jobportal" | "uassi4b" | "rpl";
   metrics?: {
     label: string;
     value: string;

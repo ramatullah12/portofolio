@@ -164,4 +164,43 @@ export const projects: Project[] = [
       { label: "Kolaborasi", value: "Teamwork" },
     ],
   },
+  {
+    id: "project-rpl-umber",
+    title: "RPL Web Application — Proyek Rekayasa Perangkat Lunak",
+    subtitle: "Software Engineering Web App • Modern UI & System Workflow",
+    description:
+      "Aplikasi web Rekayasa Perangkat Lunak (RPL) yang dirancang dengan tahapan analisis sistem terstruktur, desain antarmuka modern berpusat pada pengguna, serta implementasi komponen frontend responsif.",
+    challenge:
+      "Menerjemahkan spesifikasi kebutuhan sistem pada mata kuliah Rekayasa Perangkat Lunak (RPL) menjadi aplikasi web interaktif yang siap digunakan dan memiliki alur pengguna (user flow) yang jelas.",
+    solution:
+      "Mengembangkan aplikasi web berbasis komponen modern dengan React.js & Tailwind CSS, menerapkan struktur navigasi intuitif, desain responsif lintas perangkat, serta deployment cloud di Vercel.",
+    category: "Academic Project",
+    technologies: [
+      "React.js",
+      "JavaScript (ES6+)",
+      "Tailwind CSS",
+      "HTML5 & CSS3",
+      "Software Engineering",
+      "Figma UI/UX",
+    ],
+    features: [
+      "Penerapan metodologi Rekayasa Perangkat Lunak (RPL) dari perancangan hingga deployment",
+      "Desain antarmuka modern dan responsif di berbagai ukuran layar (Mobile & Desktop)",
+      "Struktur komponen frontend yang modular, cepat, dan mudah dipelihara (Clean Code)",
+      "Navigasi dan alur interaksi pengguna (User Experience) yang intuitif",
+    ],
+    year: "2025",
+    role: "Frontend Developer",
+    featured: true,
+    liveUrl: "https://rpl-umber.vercel.app/",
+    liveDomain: "rpl-umber.vercel.app",
+    githubUrl: "https://github.com/ramatullah12",
+    accentColor: "from-amber-500 to-orange-600",
+    previewType: "rpl",
+    metrics: [
+      { label: "Status App", value: "Live di Vercel" },
+      { label: "Bidang", value: "Software Eng." },
+      { label: "UI/UX", value: "Responsive Web" },
+    ],
+  },
 ];

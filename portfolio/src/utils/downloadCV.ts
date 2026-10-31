@@ -187,6 +187,7 @@ export function downloadCV() {
             <li><strong>Rakentra (Fleet & Heavy Equipment System - PT RKS):</strong> <a href="https://rakentra.vercel.app/login" target="_blank">https://rakentra.vercel.app/login</a></li>
             <li><strong>Kedaton Property (Real Estate Platform - PT KSA):</strong> <a href="https://kedaton-gamma.vercel.app/" target="_blank">https://kedaton-gamma.vercel.app/</a></li>
             <li><strong>Job Portal (Career & Recruitment Web App):</strong> <a href="https://job-portal-wine-mu.vercel.app/" target="_blank">https://job-portal-wine-mu.vercel.app/</a></li>
+            <li><strong>RPL Web Application (Software Engineering Project):</strong> <a href="https://rpl-umber.vercel.app/" target="_blank">https://rpl-umber.vercel.app/</a></li>
             <li><strong>Project UAS SI4B (Information Systems Web App):</strong> <a href="https://project-uas-si4b-yuandimas.vercel.app/" target="_blank">https://project-uas-si4b-yuandimas.vercel.app/</a></li>
           </ul>
         </div>
