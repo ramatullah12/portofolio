@@ -41,7 +41,7 @@ const Navbar = () => {
           </div>
           <div className="flex flex-col">
             <span className="text-base font-extrabold tracking-tight text-slate-900 dark:text-white">
-              Yuan<span className="text-blue-600 dark:text-blue-400">.dev</span>
+              Yuan Ramatullah<span className="text-blue-600 dark:text-blue-400"></span>
             </span>
             <span className="font-mono text-[10px] font-medium text-slate-500 dark:text-slate-400">
               Frontend & UI/UX
