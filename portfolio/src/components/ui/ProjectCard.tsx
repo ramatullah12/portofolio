@@ -203,6 +203,102 @@ const ProjectPreviewIllustration = ({
             </div>
           </>
         )}
+
+        {previewType === "smartpresence" && (
+          <>
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-cyan-300">
+                  ATTENDANCE & GEOFENCING
+                </div>
+                <div className="mt-0.5 text-xs font-bold">
+                  SmartPresence • Live Dashboard
+                </div>
+              </div>
+              <span className="rounded-full border border-cyan-400/40 bg-cyan-500/20 px-2.5 py-0.5 text-[10px] font-semibold text-cyan-200">
+                99.4% Akurat
+              </span>
+            </div>
+            <div className="my-2 grid grid-cols-3 gap-2">
+              <div className="rounded-lg bg-white/10 p-2">
+                <div className="text-[9px] text-slate-300">Check-In</div>
+                <div className="text-xs font-bold text-cyan-300">GPS & QR</div>
+              </div>
+              <div className="rounded-lg bg-white/10 p-2">
+                <div className="text-[9px] text-slate-300">Analitik</div>
+                <div className="text-xs font-bold text-emerald-300">Real-Time</div>
+              </div>
+              <div className="rounded-lg bg-white/10 p-2">
+                <div className="text-[9px] text-slate-300">Laporan</div>
+                <div className="text-xs font-bold text-white">Auto-Rekap</div>
+              </div>
+            </div>
+          </>
+        )}
+
+        {previewType === "lensakarya" && (
+          <>
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-fuchsia-300">
+                  PHOTOGRAPHY STUDIO PLATFORM
+                </div>
+                <div className="mt-0.5 text-xs font-bold">
+                  LensaKarya • Gallery & Booking
+                </div>
+              </div>
+              <span className="rounded-full border border-fuchsia-400/40 bg-fuchsia-500/20 px-2.5 py-0.5 text-[10px] font-semibold text-fuchsia-200">
+                4K Portfolio
+              </span>
+            </div>
+            <div className="my-2 grid grid-cols-3 gap-2">
+              <div className="rounded-lg bg-white/10 p-2">
+                <div className="text-[9px] text-slate-300">Katalog</div>
+                <div className="text-xs font-bold text-fuchsia-300">Paket Foto</div>
+              </div>
+              <div className="rounded-lg bg-white/10 p-2">
+                <div className="text-[9px] text-slate-300">Jadwal Sesi</div>
+                <div className="text-xs font-bold text-amber-300">Online Slot</div>
+              </div>
+              <div className="rounded-lg bg-white/10 p-2">
+                <div className="text-[9px] text-slate-300">Rating</div>
+                <div className="text-xs font-bold text-white">★ 4.95/5</div>
+              </div>
+            </div>
+          </>
+        )}
+
+        {previewType === "driveease" && (
+          <>
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-emerald-300">
+                  VEHICLE RENTAL & FLEET
+                </div>
+                <div className="mt-0.5 text-xs font-bold">
+                  DriveEase • Reservasi Kendaraan
+                </div>
+              </div>
+              <span className="rounded-full border border-emerald-400/40 bg-emerald-500/20 px-2.5 py-0.5 text-[10px] font-semibold text-emerald-200">
+                24/7 Booking
+              </span>
+            </div>
+            <div className="my-2 grid grid-cols-3 gap-2">
+              <div className="rounded-lg bg-white/10 p-2">
+                <div className="text-[9px] text-slate-300">Unit Armada</div>
+                <div className="text-xs font-bold text-emerald-300">Ready Stock</div>
+              </div>
+              <div className="rounded-lg bg-white/10 p-2">
+                <div className="text-[9px] text-slate-300">Jadwal Sewa</div>
+                <div className="text-xs font-bold text-cyan-300">0 Bentrok</div>
+              </div>
+              <div className="rounded-lg bg-white/10 p-2">
+                <div className="text-[9px] text-slate-300">Kalkulasi</div>
+                <div className="text-xs font-bold text-white">Transparan</div>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
