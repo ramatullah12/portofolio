@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiCheckCircle, FiGithub, FiExternalLink, FiCpu, FiAlertCircle } from "react-icons/fi";
+import {
+  FiCheckCircle,
+  FiGithub,
+  FiExternalLink,
+  FiCpu,
+  FiAlertCircle,
+  FiSearch,
+} from "react-icons/fi";
 import SectionTitle from "../common/SectionTitle";
 import ProjectCard from "../ui/ProjectCard";
 import Modal from "../ui/Modal";
@@ -9,12 +16,25 @@ import type { Project, ProjectCategory } from "../../types/Project";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>("Semua");
+  const [searchQuery, setSearchQuery] = useState("");
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
-  const filteredProjects =
-    selectedCategory === "Semua"
-      ? projects
-      : projects.filter((project) => project.category === selectedCategory);
+  const filteredProjects = projects.filter((project) => {
+    const matchesCategory =
+      selectedCategory === "Semua" || project.category === selectedCategory;
+    const query = searchQuery.trim().toLowerCase();
+    const matchesSearch =
+      !query ||
+      project.title.toLowerCase().includes(query) ||
+      project.description.toLowerCase().includes(query) ||
+      project.technologies.some((t) => t.toLowerCase().includes(query));
+    return matchesCategory && matchesSearch;
+  });
+
+  const getCategoryCount = (category: ProjectCategory) => {
+    if (category === "Semua") return projects.length;
+    return projects.filter((p) => p.category === category).length;
+  };
 
   return (
     <section
@@ -26,41 +46,82 @@ const Projects = () => {
           badge="Live Projects (Vercel)"
           title="Aplikasi Web Nyata yang"
           highlight="Telah Saya Bangun & Deploy"
-          subtitle="Kumpulan proyek magang industri (PT Rachmat Kelantan Sakti & PT Kedaton Sejahtera Abadi), aplikasi Job Portal, dan proyek akademik yang dapat diakses secara langsung."
+          subtitle="Kumpulan 8 proyek aplikasi web yang telah di-deploy ke Vercel — mulai dari sistem enterprise magang industri (PT Rachmat Kelantan Sakti & PT Kedaton Sejahtera Abadi), aplikasi produk, hingga proyek akademik."
         />
 
-        {/* Category Filter Tabs */}
-        <div className="mb-12 flex flex-wrap items-center justify-center gap-2">
-          {projectCategories.map((category) => {
-            const isActive = selectedCategory === category;
-            return (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`rounded-xl px-5 py-2.5 text-xs font-bold transition sm:text-sm cursor-pointer ${
-                  isActive
-                    ? "bg-blue-600 text-white shadow-md shadow-blue-500/25"
-                    : "border border-slate-200/80 bg-white text-slate-600 hover:border-blue-400 hover:text-blue-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400 dark:hover:text-white"
-                }`}
-              >
-                {category}
-              </button>
-            );
-          })}
+        {/* Filter Tabs + Search Input */}
+        <div className="mb-12 flex flex-col items-center justify-between gap-4 lg:flex-row">
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {projectCategories.map((category) => {
+              const isActive = selectedCategory === category;
+              const count = getCategoryCount(category);
+              return (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-bold transition sm:text-sm cursor-pointer ${
+                    isActive
+                      ? "bg-blue-600 text-white shadow-md shadow-blue-500/25"
+                      : "border border-slate-200/80 bg-white text-slate-600 hover:border-blue-400 hover:text-blue-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400 dark:hover:text-white"
+                  }`}
+                >
+                  <span>{category}</span>
+                  <span
+                    className={`rounded-full px-2 py-0.5 text-[10px] font-extrabold ${
+                      isActive
+                        ? "bg-white/20 text-white"
+                        : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"
+                    }`}
+                  >
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Search Bar */}
+          <div className="relative w-full max-w-xs">
+            <FiSearch className="pointer-events-none absolute top-1/2 left-3.5 h-4 w-4 -translate-y-1/2 text-slate-400" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Cari proyek atau teknologi..."
+              className="w-full rounded-xl border border-slate-200/80 bg-white py-2.5 pr-4 pl-10 text-xs font-medium text-slate-800 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 sm:text-sm dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:focus:border-blue-400"
+            />
+          </div>
         </div>
 
-        {/* Projects Grid (2 columns on desktop so the 4 live projects look balanced & spacious) */}
-        <motion.div layout className="grid gap-8 md:grid-cols-2">
-          <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                onSelect={(proj) => setActiveProject(proj)}
-              />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        {/* Projects Grid */}
+        {filteredProjects.length > 0 ? (
+          <motion.div layout className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <AnimatePresence mode="popLayout">
+              {filteredProjects.map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  onSelect={(proj) => setActiveProject(proj)}
+                />
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        ) : (
+          <div className="rounded-3xl border border-slate-200/80 bg-white p-12 text-center dark:border-slate-800 dark:bg-slate-900/60">
+            <p className="text-base font-bold text-slate-800 dark:text-slate-200">
+              Tidak ada proyek yang cocok dengan pencarian "{searchQuery}"
+            </p>
+            <button
+              onClick={() => {
+                setSelectedCategory("Semua");
+                setSearchQuery("");
+              }}
+              className="mt-4 rounded-xl bg-blue-600 px-4 py-2 text-xs font-bold text-white transition hover:bg-blue-700 cursor-pointer"
+            >
+              Reset Filter
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Interactive Case Study Modal */}

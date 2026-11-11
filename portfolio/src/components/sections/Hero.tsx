@@ -141,13 +141,21 @@ const Hero = () => {
           </div>
 
           {/* Quick Stats from CV */}
-          <div className="mt-12 grid grid-cols-3 gap-4 border-t border-slate-200/80 pt-8 sm:max-w-lg dark:border-slate-800/80">
+          <div className="mt-12 grid grid-cols-2 gap-4 border-t border-slate-200/80 pt-8 sm:grid-cols-4 sm:max-w-2xl dark:border-slate-800/80">
             <div>
               <div className="text-2xl font-extrabold text-slate-900 sm:text-3xl dark:text-white">
                 3.47<span className="text-base font-bold text-blue-600 dark:text-blue-400">/4.00</span>
               </div>
               <div className="mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">
                 IPK S1 Sistem Informasi
+              </div>
+            </div>
+            <div>
+              <div className="text-2xl font-extrabold text-slate-900 sm:text-3xl dark:text-white">
+                8<span className="text-emerald-500">+</span>
+              </div>
+              <div className="mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+                Live Web Apps (Vercel)
               </div>
             </div>
             <div>
@@ -160,10 +168,10 @@ const Hero = () => {
             </div>
             <div>
               <div className="text-2xl font-extrabold text-slate-900 sm:text-3xl dark:text-white">
-                20<span className="text-cyan-500">+</span>
+                DBA<span className="text-amber-500 text-lg ml-1">✓</span>
               </div>
               <div className="mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">
-                Technical & Soft Skills
+                Lulus Sertifikasi Profesi
               </div>
             </div>
           </div>
