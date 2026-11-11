@@ -152,7 +152,7 @@ export function downloadCV() {
           </div>
           <ul>
             <li><strong>IPK:</strong> 3.47 / 4.00</li>
-            <li><strong>Professional Certification:</strong> Lulus Sertifikasi Kompetensi Database Administrator (DBA)</li>
+            <li><strong>BNSP Professional Certification:</strong> Administrator Basis Data / Database Administrator (No. Sertifikat: 62019 2521 6 0000392 2026 | No. Reg. TIK. 2385 00392 2026 — LSP Universitas Multi Data Palembang, 26 Oktober 2026) — <a href="/sertifikat-dba-yuan-ramatullah.pdf" target="_blank">Lihat File Sertifikat PDF</a></li>
           </ul>
         </div>
 

@@ -3,21 +3,62 @@ import type { Certificate } from "../types/Certificate";
 export const certificates: Certificate[] = [
   {
     id: "cert-dba-certified",
-    title: "Lulus Sertifikasi Kompetensi — Database Administrator (DBA)",
-    issuer: "Sertifikasi Kompetensi Profesi / BNSP",
-    date: "2025 – 2026",
-    credentialId: "DBA-CERT-LULUS",
-    category: "Professional Certification",
+    title: "Sertifikat Kompetensi BNSP — Administrator Basis Data (Database Administrator)",
+    issuer: "Badan Nasional Sertifikasi Profesi (BNSP) • LSP Universitas Multi Data Palembang",
+    date: "26 Oktober 2026",
+    credentialId: "62019 2521 6 0000392 2026",
+    regNumber: "No. Reg. TIK. 2385 00392 2026",
+    validDuration: "Berlaku 3 (Tiga) Tahun",
+    category: "Sertifikasi Kompetensi BNSP",
     skills: [
-      "Database Administration",
-      "MySQL & Relational DB",
-      "SQL Query Optimization",
-      "Database Design & Security",
-      "Backup & Data Integrity",
+      "Mendesain Basis Data",
+      "Membuat Basis Data",
+      "Integrasi Data",
+      "Kualitas Data",
+      "Menggunakan SQL",
+      "Akses Basis Data",
     ],
     description:
-      "Dinyatakan Kompeten / Lulus Sertifikasi Database Administrator (DBA), mencakup perancangan skema basis data relasional, administrasi server database, optimasi kueri SQL, keamanan akses data, serta pemeliharaan integritas data.",
+      "Dinyatakan Kompeten pada bidang Sistem Manajemen Data (Data Management System) dengan Kualifikasi/Kompetensi Administrator Basis Data (Database Administrator) oleh Badan Nasional Sertifikasi Profesi (BNSP) melalui LSP Universitas Multi Data Palembang.",
     accentColor: "from-amber-500 to-orange-600",
+    fileUrl: "/sertifikat-dba-yuan-ramatullah.pdf",
+    competencyUnits: [
+      {
+        code: "J.62DMS00.006.1",
+        title: "Mendesain basis data",
+        titleEn: "Designing a database",
+      },
+      {
+        code: "J.62DMS00.010.1",
+        title: "Membuat basis data",
+        titleEn: "Creating a database",
+      },
+      {
+        code: "J.62DMS00.011.1",
+        title: "Membuat integrasi data",
+        titleEn: "Creating data integration",
+      },
+      {
+        code: "J.62DMS00.012.1",
+        title: "Mengelola kualitas data",
+        titleEn: "Managing data quality",
+      },
+      {
+        code: "J.62DMS00.016.1",
+        title: "Mengelola dokumen dan konten",
+        titleEn: "Managing documents and content",
+      },
+      {
+        code: "J.620100.020.02",
+        title: "Menggunakan SQL",
+        titleEn: "Using SQL",
+      },
+      {
+        code: "J.620100.021.02",
+        title: "Menerapkan akses basis data",
+        titleEn: "Implementing database access",
+      },
+    ],
   },
   {
     id: "cert-mdp-is",
