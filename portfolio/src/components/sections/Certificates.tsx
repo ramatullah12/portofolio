@@ -40,7 +40,9 @@ const Certificates = () => {
         {selectedCertificate && (
           <div className="space-y-6">
             {/* Metadata Header */}
-            <div className="rounded-2xl bg-gradient-to-r from-amber-500 to-orange-600 p-5 text-white">
+            <div
+              className={`rounded-2xl bg-gradient-to-r ${selectedCertificate.accentColor} p-5 text-white`}
+            >
               <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-white/90">
                 <span className="inline-flex items-center gap-1.5">
                   <FiAward className="h-4 w-4" />
@@ -75,7 +77,7 @@ const Certificates = () => {
               <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 dark:border-slate-800 dark:bg-slate-950">
                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 bg-white px-4 py-3 dark:border-slate-800 dark:bg-slate-900">
                   <span className="text-xs font-bold text-slate-700 dark:text-slate-200">
-                    Pratinjau Dokumen Sertifikat BNSP (3 Halaman)
+                    Pratinjau Dokumen Resmi (3 Halaman)
                   </span>
                   <div className="flex items-center gap-2">
                     <a

@@ -16,6 +16,7 @@ export interface Project {
   liveUrl?: string;
   liveDomain?: string;
   githubUrl?: string;
+  documentUrl?: string;
   accentColor: string;
   previewType:
     | "rakentra"

@@ -39,6 +39,7 @@ export const projects: Project[] = [
     liveUrl: "https://rakentra.vercel.app/login",
     liveDomain: "rakentra.vercel.app/login",
     githubUrl: "https://github.com/ramatullah12",
+    documentUrl: "/dokumen-rks-yuan-ramatullah.pdf",
     accentColor: "from-emerald-600 to-teal-500",
     previewType: "rakentra",
     metrics: [

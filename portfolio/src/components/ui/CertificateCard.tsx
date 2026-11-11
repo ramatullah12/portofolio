@@ -45,7 +45,7 @@ const CertificateCard = ({ certificate, index, onPreview }: CertificateCardProps
           <div className="flex flex-wrap items-center gap-2">
             {certificate.fileUrl && (
               <span className="inline-flex items-center gap-1 rounded-full bg-amber-500/15 px-3 py-1 text-xs font-bold text-amber-700 dark:text-amber-300">
-                ★ Dokumen Resmi BNSP
+                ★ {certificate.id === "cert-dba-certified" ? "Dokumen Resmi BNSP" : "Dokumen & Bukti Resmi"}
               </span>
             )}
             <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 font-mono text-xs font-medium text-slate-600 dark:border-slate-800 dark:bg-slate-800/70 dark:text-slate-300">

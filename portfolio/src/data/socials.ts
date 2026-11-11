@@ -83,10 +83,10 @@ export const experiences: ExperienceItem[] = [
     period: "Jan 2026 – Jun 2026",
     title: "Fullstack Web Developer — Internship",
     organization: "PT Rachmat Kelantan Sakti",
-    location: "Indonesia",
+    location: "Jl. Demang Lebar Daun No. 4273, Palembang",
     type: "Proyek & Pengalaman",
     description:
-      "Mengembangkan sistem informasi terintegrasi untuk reservasi armada alat berat, manajemen perawatan & perbaikan (maintenance), serta otomatisasi inventori suku cadang konstruksi.",
+      "Rancang Bangun Sistem Informasi Penyewaan Alat Berat Berbasis Web di PT Rachmat Kelantan Sakti — mencakup reservasi armada alat berat, manajemen perawatan & perbaikan (maintenance), serta otomatisasi inventori suku cadang konstruksi.",
     highlights: [
       "Integrated Fleet Reservation: Mengembangkan modul booking alat berat secara real-time untuk mengoptimalkan alokasi armada di berbagai lokasi proyek konstruksi.",
       "Maintenance & Repair Tracking: Membangun sistem manajemen perbaikan komprehensif untuk mendokumentasikan waktu henti (downtime) alat, riwayat servis, dan jadwal pemeliharaan rutin.",
@@ -101,6 +101,10 @@ export const experiences: ExperienceItem[] = [
       "Inventory System",
       "Fullstack",
     ],
+    documentUrl: "/dokumen-rks-yuan-ramatullah.pdf",
+    documentTitle:
+      "Surat Pengantar, Izin Survei & Dokumentasi Lapangan — PT Rachmat Kelantan Sakti",
+    documentMeta: "No: 010/UMDP/II/M/2026 & 026/UMDP/III/M/2026 • NPM: 2226240113",
   },
   {
     id: "exp-ksa",

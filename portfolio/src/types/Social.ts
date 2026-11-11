@@ -17,5 +17,7 @@ export interface ExperienceItem {
   description: string;
   highlights: string[];
   tags: string[];
+  documentUrl?: string;
+  documentTitle?: string;
+  documentMeta?: string;
 }
-

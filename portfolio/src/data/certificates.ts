@@ -80,9 +80,11 @@ export const certificates: Certificate[] = [
   {
     id: "cert-intern-rks",
     title: "Fullstack Web Developer Internship — Fleet & Maintenance System",
-    issuer: "PT Rachmat Kelantan Sakti",
+    issuer: "PT Rachmat Kelantan Sakti • Fakultas Ilmu Komputer & Rekayasa UMDP",
     date: "Jan 2026 – Jun 2026",
-    credentialId: "RKS-INTERN-2026",
+    credentialId: "010/UMDP/II/M/2026 & 026/UMDP/III/M/2026",
+    regNumber: "NPM: 2226240113",
+    validDuration: "Dokumen Resmi & Dokumentasi",
     category: "Industrial Experience",
     skills: [
       "Fleet Reservation",
@@ -91,8 +93,9 @@ export const certificates: Certificate[] = [
       "Automated Data Sync",
     ],
     description:
-      "Pengalaman industri membangun sistem reservasi alat berat real-time, pelacakan pemeliharaan & perbaikan, serta otomatisasi sinkronisasi inventori suku cadang.",
+      "Rancang Bangun Sistem Informasi Penyewaan Alat Berat Berbasis Web di PT Rachmat Kelantan Sakti (Jl. Demang Lebar Daun No. 4273, Palembang) — mencakup surat pengantar, izin survei pengambilan data, serta dokumentasi lapangan.",
     accentColor: "from-emerald-500 to-teal-500",
+    fileUrl: "/dokumen-rks-yuan-ramatullah.pdf",
   },
   {
     id: "cert-intern-ksa",

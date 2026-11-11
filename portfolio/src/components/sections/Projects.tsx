@@ -205,6 +205,18 @@ const Projects = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-2.5">
+                {activeProject.documentUrl && (
+                  <a
+                    href={activeProject.documentUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-bold text-white shadow-md shadow-emerald-500/20 transition hover:bg-emerald-700"
+                  >
+                    <span>Lihat Surat & Dokumentasi PT RKS (PDF)</span>
+                    <FiExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                )}
+
                 {activeProject.liveUrl && (
                   <a
                     href={activeProject.liveUrl}

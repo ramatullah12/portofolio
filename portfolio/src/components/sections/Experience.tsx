@@ -1,9 +1,23 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { FiBriefcase, FiBook, FiStar, FiMapPin, FiCheckCircle } from "react-icons/fi";
+import {
+  FiBriefcase,
+  FiBook,
+  FiStar,
+  FiMapPin,
+  FiCheckCircle,
+  FiFileText,
+  FiExternalLink,
+  FiDownload,
+} from "react-icons/fi";
 import SectionTitle from "../common/SectionTitle";
+import Modal from "../ui/Modal";
 import { experiences } from "../../data/socials";
+import type { ExperienceItem } from "../../types/Social";
 
 const Experience = () => {
+  const [selectedExpDoc, setSelectedExpDoc] = useState<ExperienceItem | null>(null);
+
   const getIcon = (type: string) => {
     if (type === "Pendidikan") return FiBook;
     if (type === "Proyek & Pengalaman") return FiBriefcase;
@@ -16,8 +30,8 @@ const Experience = () => {
         <SectionTitle
           badge="Pendidikan & Perjalanan"
           title="Jejak Akademik &"
-          highlight="Pengembangan Proyek"
-          subtitle="Perjalanan belajar di Universitas Multi Data Palembang serta pengalaman merancang dan membangun berbagai sistem aplikasi."
+          highlight="Pengalaman Magang Industri"
+          subtitle="Perjalanan studi di Universitas Multi Data Palembang serta pengalaman membangun sistem di PT Rachmat Kelantan Sakti dan PT Kedaton Sejahtera Abadi."
         />
 
         <div className="relative space-y-8 before:absolute before:top-4 before:bottom-4 before:left-5 before:w-0.5 before:bg-gradient-to-b before:from-blue-600 before:via-indigo-500 before:to-cyan-400 md:before:left-1/2 md:before:-translate-x-1/2">
@@ -85,7 +99,7 @@ const Experience = () => {
                       ))}
                     </ul>
 
-                    <div className="mt-4 flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
+                    <div className="mt-4 flex flex-wrap gap-1.5 border-t border-slate-100 pt-3 dark:border-slate-800">
                       {item.tags.map((tag) => (
                         <span
                           key={tag}
@@ -95,6 +109,30 @@ const Experience = () => {
                         </span>
                       ))}
                     </div>
+
+                    {/* Document PDF Preview Button if available */}
+                    {item.documentUrl && (
+                      <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-slate-100 pt-4 dark:border-slate-800">
+                        <button
+                          onClick={() => setSelectedExpDoc(item)}
+                          className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-2.5 text-xs font-bold text-white shadow-md shadow-emerald-500/20 transition hover:from-emerald-700 hover:to-teal-700 cursor-pointer"
+                        >
+                          <FiFileText className="h-4 w-4" />
+                          <span>Lihat File Surat & Dokumentasi (PDF)</span>
+                        </button>
+
+                        <a
+                          href={item.documentUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          title="Buka PDF di Tab Baru"
+                          className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-xs font-bold text-slate-700 transition hover:border-emerald-500 hover:text-emerald-600 dark:border-slate-800 dark:bg-slate-800 dark:text-slate-200"
+                        >
+                          <FiExternalLink className="h-3.5 w-3.5" />
+                          <span>Buka PDF</span>
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -102,9 +140,69 @@ const Experience = () => {
           })}
         </div>
       </div>
+
+      {/* Modal Preview Dokumen Internship PT Rachmat Kelantan Sakti */}
+      <Modal
+        isOpen={Boolean(selectedExpDoc)}
+        onClose={() => setSelectedExpDoc(null)}
+        title={selectedExpDoc?.documentTitle || selectedExpDoc?.title}
+      >
+        {selectedExpDoc && selectedExpDoc.documentUrl && (
+          <div className="space-y-5">
+            <div className="rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 p-5 text-white">
+              <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-white/90">
+                <span>{selectedExpDoc.organization}</span>
+                <span className="rounded-full bg-black/25 px-3 py-1 font-mono">
+                  {selectedExpDoc.period}
+                </span>
+              </div>
+              <h4 className="mt-2 text-lg font-extrabold">
+                Rancang Bangun Sistem Informasi Penyewaan Alat Berat Berbasis Web di PT Rachmat
+                Kelantan Sakti
+              </h4>
+              {selectedExpDoc.documentMeta && (
+                <p className="mt-1 font-mono text-xs text-white/90">
+                  {selectedExpDoc.documentMeta}
+                </p>
+              )}
+            </div>
+
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 dark:border-slate-800 dark:bg-slate-950">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 bg-white px-4 py-3 dark:border-slate-800 dark:bg-slate-900">
+                <span className="text-xs font-bold text-slate-700 dark:text-slate-200">
+                  Surat Pengantar, Izin Survei & Dokumentasi Lapangan PT RKS (3 Halaman)
+                </span>
+                <div className="flex items-center gap-2">
+                  <a
+                    href={selectedExpDoc.documentUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-bold text-white transition hover:bg-emerald-700"
+                  >
+                    <FiExternalLink className="h-3.5 w-3.5" />
+                    Buka Layar Penuh
+                  </a>
+                  <a
+                    href={selectedExpDoc.documentUrl}
+                    download="Dokumen-Internship-PT-Rachmat-Kelantan-Sakti-Yuan.pdf"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-700 transition hover:border-emerald-500 hover:text-emerald-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200"
+                  >
+                    <FiDownload className="h-3.5 w-3.5" />
+                    Unduh PDF
+                  </a>
+                </div>
+              </div>
+              <iframe
+                src={selectedExpDoc.documentUrl}
+                title={selectedExpDoc.documentTitle}
+                className="h-[500px] w-full border-0"
+              />
+            </div>
+          </div>
+        )}
+      </Modal>
     </section>
   );
 };
 
 export default Experience;
-
