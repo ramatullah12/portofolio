@@ -5,6 +5,7 @@ import {
   FiLayers,
   FiExternalLink,
   FiInfo,
+  FiFileText,
 } from "react-icons/fi";
 import type { Project } from "../../types/Project";
 
@@ -404,6 +405,19 @@ const ProjectCard = ({ project, onSelect }: ProjectCardProps) => {
               <FiInfo className="h-3.5 w-3.5" />
               <span>Detail</span>
             </button>
+
+            {project.documentUrl && (
+              <a
+                href={project.documentUrl}
+                target="_blank"
+                rel="noreferrer"
+                title="Lihat File Surat, HAKI & Dokumentasi (PDF)"
+                className="inline-flex items-center justify-center gap-1 rounded-xl border border-emerald-500/40 bg-emerald-500/10 px-3 py-2.5 text-xs font-bold text-emerald-700 transition hover:bg-emerald-600 hover:text-white dark:text-emerald-300 dark:hover:bg-emerald-600 dark:hover:text-white"
+              >
+                <FiFileText className="h-3.5 w-3.5" />
+                <span>PDF</span>
+              </a>
+            )}
 
             {project.githubUrl && (
               <a

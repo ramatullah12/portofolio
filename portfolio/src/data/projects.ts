@@ -79,11 +79,12 @@ export const projects: Project[] = [
     liveUrl: "https://kedaton-gamma.vercel.app/",
     liveDomain: "kedaton-gamma.vercel.app",
     githubUrl: "https://github.com/ramatullah12",
+    documentUrl: "/dokumen-ksa-yuan-ramatullah.pdf",
     accentColor: "from-blue-600 to-indigo-600",
     previewType: "kedaton",
     metrics: [
       { label: "Status App", value: "Live di Vercel" },
-      { label: "Pencarian", value: "Instant Filter" },
+      { label: "Legalitas", value: "HAKI 001077745" },
       { label: "Perusahaan", value: "PT KSA" },
     ],
   },

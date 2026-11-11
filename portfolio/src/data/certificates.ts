@@ -99,14 +99,24 @@ export const certificates: Certificate[] = [
   },
   {
     id: "cert-intern-ksa",
-    title: "Fullstack Web Developer Internship — Real Estate Platform",
-    issuer: "PT Kedaton Sejahtera Abadi",
+    title:
+      "Fullstack Web Developer Internship & Hak Cipta (HAKI) — PT Kedaton Sejahtera Abadi",
+    issuer: "PT Kedaton Sejahtera Abadi & Kementerian Hukum RI (DJKI)",
     date: "Sep 2025 – Jan 2026",
-    credentialId: "KSA-INTERN-2025",
-    category: "Industrial Experience",
-    skills: ["Laravel (MVC)", "MySQL & Eloquent ORM", "RESTful API", "CSRF Security"],
+    credentialId: "HAKI No: 001077745 (EC002026006786)",
+    regNumber: "Surat Selesai KP: 104/KSA/I/2026",
+    validDuration: "Hak Cipta Berlaku 50 Tahun",
+    category: "Industrial Experience & Copyright (HAKI)",
+    skills: [
+      "Laravel (MVC)",
+      "MySQL & Eloquent ORM",
+      "RESTful API",
+      "KEDAMARK Property App",
+      "HAKI Program Komputer",
+    ],
     description:
-      "Pengalaman industri mengembangkan platform properti berbasis Laravel (MVC), perancangan skema database MySQL, integrasi RESTful API dengan frontend Angular, dan fitur pencarian cepat.",
+      "Pengalaman Kerja Praktik mengembangkan aplikasi pemasaran properti KEDAMARK di PT Kedaton Sejahtera Abadi (Surat Balasan 103/KSA/XI/2025 & Surat Selesai 104/KSA/I/2026), yang telah resmi tercatat sebagai Ciptaan Program Komputer di Kementerian Hukum RI.",
     accentColor: "from-violet-500 to-fuchsia-500",
+    fileUrl: "/dokumen-ksa-yuan-ramatullah.pdf",
   },
 ];

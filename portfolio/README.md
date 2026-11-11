@@ -1,75 +1,42 @@
-# React + TypeScript + Vite
+# Yuan Ramatullah — Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portofolio resmi **Yuan Ramatullah** — **Frontend & Fullstack Web Developer** lulusan **S1 Sistem Informasi Universitas Multi Data Palembang (IPK 3.47 / 4.00)** serta **Certified Database Administrator (BNSP)**.
 
-Currently, two official plugins are available:
+## Fitur Utama UI/UX
+- **Modern Glassmorphic Design** dengan dukungan **Dark Mode & Light Mode** (`localStorage` persistent).
+- **8 Proyek Live Terintegrasi (Vercel)** lengkap dengan filter kategori, pencarian instan, dan modal studi kasus:
+  1. [Rakentra — Fleet & Heavy Equipment System (PT Rachmat Kelantan Sakti)](https://rakentra.vercel.app/login)
+  2. [Kedaton Property / KEDAMARK — Real Estate Platform (PT Kedaton Sejahtera Abadi)](https://kedaton-gamma.vercel.app/)
+  3. [SmartPresence — Sistem Absensi Digital & Geolocation Dashboard](https://smartpresence-phi.vercel.app/dashboard)
+  4. [LensaKarya — Platform Booking & Galeri Studio Fotografi](https://lensakarya.vercel.app/)
+  5. [DriveEase — Sistem Informasi Rental & Manajemen Armada](https://driveeasee.vercel.app/)
+  6. [Job Portal — Platform Pencarian Kerja & Rekrutmen Karir](https://job-portal-wine-mu.vercel.app/)
+  7. [RPL Web Application — Proyek Rekayasa Perangkat Lunak](https://rpl-umber.vercel.app/)
+  8. [Project UAS SI4B — Aplikasi Web Sistem Informasi](https://project-uas-si4b-yuandimas.vercel.app/)
+- **Interactive PDF Document Viewer** terintegrasi di dalam aplikasi untuk:
+  - **Sertifikat Kompetensi BNSP — Administrator Basis Data (Database Administrator)** (`No. 62019 2521 6 0000392 2026` + 7 Unit Kompetensi)
+  - **Surat Kerja Praktik, Sertifikat HAKI Kemenkum RI (`No. 001077745`), & Poster KEDAMARK — PT Kedaton Sejahtera Abadi**
+  - **Surat Pengantar, Izin Survei, & Dokumentasi Lapangan — PT Rachmat Kelantan Sakti**
+- **CV Siap Cetak / Simpan PDF** melalui tombol **Lihat CV / Download CV**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- **React 19** + **TypeScript**
+- **Tailwind CSS v4** (`@tailwindcss/vite`)
+- **Framer Motion** (animasi transisi & micro-interactions)
+- **React Icons** & **React Router v7**
+- **Vite 8**
 
-## React Compiler
+## Cara Menjalankan Proyek
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd portfolio
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Untuk membuat *production build*:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run build
+npm run preview
 ```

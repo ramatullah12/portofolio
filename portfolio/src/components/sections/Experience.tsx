@@ -157,8 +157,7 @@ const Experience = () => {
                 </span>
               </div>
               <h4 className="mt-2 text-lg font-extrabold">
-                Rancang Bangun Sistem Informasi Penyewaan Alat Berat Berbasis Web di PT Rachmat
-                Kelantan Sakti
+                {selectedExpDoc.documentTitle || selectedExpDoc.title}
               </h4>
               {selectedExpDoc.documentMeta && (
                 <p className="mt-1 font-mono text-xs text-white/90">
@@ -170,7 +169,7 @@ const Experience = () => {
             <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 dark:border-slate-800 dark:bg-slate-950">
               <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 bg-white px-4 py-3 dark:border-slate-800 dark:bg-slate-900">
                 <span className="text-xs font-bold text-slate-700 dark:text-slate-200">
-                  Surat Pengantar, Izin Survei & Dokumentasi Lapangan PT RKS (3 Halaman)
+                  Pratinjau Dokumen Resmi & Dokumentasi — {selectedExpDoc.organization}
                 </span>
                 <div className="flex items-center gap-2">
                   <a

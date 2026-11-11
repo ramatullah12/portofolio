@@ -152,7 +152,8 @@ export function downloadCV() {
           </div>
           <ul>
             <li><strong>IPK:</strong> 3.47 / 4.00</li>
-            <li><strong>BNSP Professional Certification:</strong> Administrator Basis Data / Database Administrator (No. Sertifikat: 62019 2521 6 0000392 2026 | No. Reg. TIK. 2385 00392 2026 — LSP Universitas Multi Data Palembang, 26 Oktober 2026) — <a href="/sertifikat-dba-yuan-ramatullah.pdf" target="_blank">Lihat File Sertifikat PDF</a></li>
+            <li><strong>BNSP Professional Certification:</strong> Administrator Basis Data / Database Administrator (No. Sertifikat: 62019 2521 6 0000392 2026 | No. Reg. TIK. 2385 00392 2026 — LSP Universitas Multi Data Palembang, 26 Oktober 2026) — <a href="/sertifikat-dba-yuan-ramatullah.pdf" target="_blank">Lihat Sertifikat BNSP (PDF)</a></li>
+            <li><strong>Hak Cipta (HAKI) Kementerian Hukum RI:</strong> Program Komputer "Rancang Bangun Aplikasi Pemasaran PT Kedaton Sejahtera Abadi (KEDAMARK)" (No. Pencatatan: 001077745 | EC002026006786, 12 Januari 2026) — <a href="/dokumen-ksa-yuan-ramatullah.pdf" target="_blank">Lihat Dokumen & HAKI PT KSA (PDF)</a></li>
           </ul>
         </div>
 

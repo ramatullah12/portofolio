@@ -7,6 +7,8 @@ import {
   FiCpu,
   FiAlertCircle,
   FiSearch,
+  FiFileText,
+  FiDownload,
 } from "react-icons/fi";
 import SectionTitle from "../common/SectionTitle";
 import ProjectCard from "../ui/ProjectCard";
@@ -18,6 +20,12 @@ const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>("Semua");
   const [searchQuery, setSearchQuery] = useState("");
   const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const [showDocPreview, setShowDocPreview] = useState(false);
+
+  const handleSelectProject = (proj: Project) => {
+    setActiveProject(proj);
+    setShowDocPreview(false);
+  };
 
   const filteredProjects = projects.filter((project) => {
     const matchesCategory =
@@ -101,7 +109,7 @@ const Projects = () => {
                 <ProjectCard
                   key={project.id}
                   project={project}
-                  onSelect={(proj) => setActiveProject(proj)}
+                  onSelect={handleSelectProject}
                 />
               ))}
             </AnimatePresence>
@@ -191,6 +199,49 @@ const Projects = () => {
               </ul>
             </div>
 
+            {/* Embedded Official Document PDF Viewer if available */}
+            {activeProject.documentUrl && (
+              <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-4 dark:bg-emerald-500/10">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <div className="text-xs font-bold uppercase text-emerald-700 dark:text-emerald-300">
+                      Dokumen Resmi, HAKI & Dokumentasi Proyek
+                    </div>
+                    <p className="mt-0.5 text-xs text-slate-600 dark:text-slate-300">
+                      Tersedia berkas PDF surat resmi perusahaan, sertifikat HAKI, dan dokumentasi lapangan.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => setShowDocPreview((prev) => !prev)}
+                      className="inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 px-3.5 py-2 text-xs font-bold text-white transition hover:bg-emerald-700 cursor-pointer"
+                    >
+                      <FiFileText className="h-3.5 w-3.5" />
+                      <span>{showDocPreview ? "Sembunyikan Pratinjau PDF" : "Pratinjau PDF di Sini"}</span>
+                    </button>
+                    <a
+                      href={activeProject.documentUrl}
+                      download
+                      className="inline-flex items-center gap-1.5 rounded-xl border border-emerald-500/40 bg-white px-3 py-2 text-xs font-bold text-emerald-700 transition hover:bg-emerald-50 dark:bg-slate-900 dark:text-emerald-300"
+                    >
+                      <FiDownload className="h-3.5 w-3.5" />
+                      <span>Unduh</span>
+                    </a>
+                  </div>
+                </div>
+
+                {showDocPreview && (
+                  <div className="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white dark:border-slate-800">
+                    <iframe
+                      src={activeProject.documentUrl}
+                      title={`Dokumen ${activeProject.title}`}
+                      className="h-[460px] w-full border-0"
+                    />
+                  </div>
+                )}
+              </div>
+            )}
+
             {/* Tech Stack & Live Links */}
             <div className="flex flex-wrap items-center justify-between gap-4 border-t border-slate-100 pt-5 dark:border-slate-800">
               <div className="flex flex-wrap gap-1.5">
@@ -212,7 +263,7 @@ const Projects = () => {
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-bold text-white shadow-md shadow-emerald-500/20 transition hover:bg-emerald-700"
                   >
-                    <span>Lihat Surat & Dokumentasi PT RKS (PDF)</span>
+                    <span>Buka PDF di Tab Baru</span>
                     <FiExternalLink className="h-3.5 w-3.5" />
                   </a>
                 )}

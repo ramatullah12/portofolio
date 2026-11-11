@@ -111,17 +111,29 @@ export const experiences: ExperienceItem[] = [
     period: "Sep 2025 – Jan 2026",
     title: "Fullstack Web Developer — Internship",
     organization: "PT Kedaton Sejahtera Abadi",
-    location: "Indonesia",
+    location: "Komplek Pusri Sako / Perum Green Hayyat Regency, Palembang",
     type: "Proyek & Pengalaman",
     description:
-      "Merancang dan membangun platform properti (real estate) berbasis arsitektur MVC dengan manajemen basis data relasional dan integrasi RESTful API.",
+      "Rancang Bangun Aplikasi Pemasaran Properti (KEDAMARK) di PT Kedaton Sejahtera Abadi — telah terdaftar Hak Cipta (HAKI) Kementerian Hukum RI (No. Pencatatan: 001077745) dengan fitur manajemen properti, tipe & unit rumah, booking, progres pembangunan, dan multi-role akses (Customer, Admin, Owner).",
     highlights: [
-      "Full-Stack Architecture: Mengembangkan platform real estate menggunakan Laravel (MVC), memastikan pemisahan logika yang bersih untuk pengalaman pengguna yang optimal.",
-      "Database Management: Merancang skema database MySQL yang teroptimasi dengan Eloquent ORM untuk mengelola data properti kompleks, ketersediaan unit, dan prospek pembeli (buyer leads).",
+      "Full-Stack Architecture: Mengembangkan platform real estate (KEDAMARK) menggunakan Laravel (MVC), memastikan pemisahan logika yang bersih untuk pengalaman pengguna yang optimal.",
+      "Database Management: Merancang skema database MySQL yang teroptimasi dengan Eloquent ORM untuk mengelola data properti kompleks, ketersediaan unit, booking, dan progres pembangunan.",
       "API & Security: Membangun RESTful API untuk integrasi dengan frontend Angular, menerapkan validasi data yang kuat serta proteksi keamanan CSRF.",
-      "Advanced Search: Mengimplementasikan logika pemfilteran berkinerja tinggi untuk pencarian properti instan berdasarkan rentang harga, luas tanah, dan spesifikasi.",
+      "Terdaftar Hak Cipta (HAKI): Memperoleh Surat Pencatatan Ciptaan Program Komputer dari Kementerian Hukum RI (No. 001077745 / EC002026006786).",
     ],
-    tags: ["Laravel (MVC)", "MySQL", "Eloquent ORM", "RESTful API", "Angular Integration", "CSRF"],
+    tags: [
+      "Laravel (MVC)",
+      "MySQL",
+      "Eloquent ORM",
+      "RESTful API",
+      "Angular Integration",
+      "HAKI 001077745",
+    ],
+    documentUrl: "/dokumen-ksa-yuan-ramatullah.pdf",
+    documentTitle:
+      "Surat Kerja Praktik, HAKI Kemenkum RI & Poster KEDAMARK — PT Kedaton Sejahtera Abadi",
+    documentMeta:
+      "HAKI No: 001077745 (EC002026006786) • Surat KP: 103/KSA/XI/2025 & 104/KSA/I/2026",
   },
   {
     id: "exp-edu",
